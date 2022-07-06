@@ -1,4 +1,5 @@
 # coding:utf-8
+import streamlit as st
 
 from multiprocessing import connection
 from unittest import main
@@ -30,6 +31,10 @@ if options.search:
     db_helper.search_module()
     exit()
 
+if st.button("RUN"):
+    st.write("Clicked")
+        
+
 def main():
     bar = Bar("Running : Scrape, Process, Injection")
 
@@ -47,51 +52,5 @@ def main():
         bar.next()
     bar.finish()
 
-if __name__ == "__main__":
-    main()
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#u = unicode(s, "utf-8")
-
-
-
-# def get_all_links(url):
-#     global r_level
-#     global limit
-
-#     r_level = r_level + 1
-#     for link in get_links(url):
-#         get_all_links(link)
-#         if r_level == limit:
-#             print("hola")
-#             return
+# if __name__ == "__main__":
+#     main()

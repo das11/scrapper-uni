@@ -1,4 +1,7 @@
 from mysql.connector import connect, Error
+import time
+
+start_time = time.time()
 
 
 def init_db():
